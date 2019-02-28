@@ -1,0 +1,42 @@
+"""
+THIS PROGRAM TESTS ACCURACY OF FUNCTIONS
+TIME.CLOCK()
+and
+TIME.TIME()
+ON THE TEST RESULTS, I FIND OUT THAT FUNCTION TIME.TIME() WORKS FASTER
+"""
+
+
+
+import time
+
+'''
+FIRST TEST
+'''
+start = time.clock()
+n = 10
+
+factorial = 1
+while n > 1:
+    factorial *= n
+    n -= 1
+
+print(factorial)
+elapsed = (time.clock() - start)
+print("RESULT OF FIRST TEST",elapsed)
+
+'''
+SECOND TEST
+'''
+start2 = time.time()
+n = 10
+
+factorial = 1
+while n > 1:
+    factorial *= n
+    n -= 1
+
+print(factorial)
+
+elapsed2= (time.time() - start2)
+print("RESULT OF SECOND TEST",elapsed2)
